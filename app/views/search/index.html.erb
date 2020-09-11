@@ -1,2 +1,15 @@
-<h1>Search#index</h1>
-<p>Find me in app/views/search/index.html.erb</p>
+<h1>Poems</h1>
+
+<section class="poems">
+  <% @poems.each do |poem| %>
+    <div class = 'poem'>
+      <h1>Poem Title: <%= poem.title %></h1>
+      <ul class = 'tones'>
+        <% poem.tones.each do |tone| %>
+          <li><%= tone %></li>
+          <% end %>
+      </ul>
+    </div>
+    <hr>
+  <% end %>
+</section>
